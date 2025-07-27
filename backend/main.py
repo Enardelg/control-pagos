@@ -93,4 +93,3 @@ def eliminar_pago(tarjeta_id: int, pago_index: int, db: Session = Depends(get_db
     db.refresh(db_tarjeta)
 
     return db_tarjeta
-

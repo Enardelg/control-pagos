@@ -1,5 +1,5 @@
-from pydantic import BaseModel
 from typing import List
+from pydantic import BaseModel
 
 class TarjetaBase(BaseModel):
     banco: str
@@ -7,11 +7,14 @@ class TarjetaBase(BaseModel):
     monto_total: float
     pago_minimo: float
 
+
 class TarjetaCreate(TarjetaBase):
     pass
 
+
 class TarjetaUpdate(TarjetaBase):
     pagos: List[float] = []
+
 
 class TarjetaOut(TarjetaBase):
     id: int
@@ -19,6 +22,7 @@ class TarjetaOut(TarjetaBase):
 
     class Config:
         from_attributes = True
+
 
 class PagoInput(BaseModel):
     pago: float
