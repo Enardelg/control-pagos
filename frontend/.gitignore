@@ -22,3 +22,22 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Entornos virtuales
+venv/
+env/
+.my_env/
+
+# Archivos Python compilados
+__pycache__/
+*.pyc
+
+# Archivos de configuración sensibles
+.env
+
+# Archivos de base de datos locales
+*.sqlite3
+*.db
+
+# Archivos de logs
+*.log
